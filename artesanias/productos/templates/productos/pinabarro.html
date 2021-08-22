@@ -1,0 +1,41 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo%}Piña de barro{%endblock%}
+
+{% block header%}
+
+<!-- Slider -->
+<div id="carouselExampleCaptions" class="carousel slide mt-5" data-ride="carousel">
+  
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        {% for banner in banners %}
+        <img src="{{banner.imagen.url}}"  width="1600px" height="640px" class="d-block w-100">
+       {% endfor %}
+      </div>
+      
+    </div>
+  </div>
+  <!-- Slider -->
+{%endblock%}
+{% block contenido%}
+<div class="container">
+  {% for artesania in artesanias %}
+<p class="mt-5"><b>Nombre</b></p>
+<p>{{artesania.nombre}}</p>
+<p class="mt-5"><b>Descripción General</b></p>
+<p style="text-align: justify;">{{artesania.descripcion}}</p>
+<p class="mt-5"><b>Foto</b></p>
+
+
+<center><img src="{{artesania.imagen.url}}"   width="280" height="180" alt=""></center>
+<p class="mt-5"><b>Municipio de origen</b></p>
+<p>{{artesania.municipio}}</p>
+<p class="mt-5" ><b>Costo</b></p>
+<p>{{artesania.costo}} MXN</p>
+
+{% endfor %}
+</div>
+     
+
+{%endblock%}

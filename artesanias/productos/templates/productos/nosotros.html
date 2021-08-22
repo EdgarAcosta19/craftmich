@@ -1,0 +1,111 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo%}Nosotros{%endblock%}
+
+
+{% block header%}
+
+<!-- Slider -->
+<div id="carouselExampleCaptions" class="carousel slide mt-5" data-ride="carousel">
+  
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        {% for banner in banners %}
+        <img src="{{banner.imagen.url}}"  width="1600px" height="640px" class="d-block w-100">
+       {% endfor %}
+      </div>
+      
+    </div>
+  </div>
+  <!-- Slider -->
+
+
+
+{%endblock%}
+
+
+{% block contenido%}
+
+<h5 class="container mt-4" style="text-align: center;">¿Quiénes somos?</h5>
+<p  class="container" style="text-align: justify;">Nosotros somos una empresa que brinda los mejores productos, por eso Creemos que el diseño es un puente que puede fortalecer comunidades, encontrar soluciones y vincular innovación con emprendimiento social, ya que hoy en dia la adquisición de artesanias michoacanas ayuda a nuestros pueblos a mantener su economia, por ello nosotros, junto con todo el equipo de desarrolladores, te traemos los mejores productos de artesanias de michocan por estado, nuestro objetivo es mostrar los productos de artesanias con sus piezas mas excepcionales, los productos en cuento artesanías se refiere, son desde Jarras, vasos, platos, catrinas, bolsos, suéter de lana, barro rojo, lana, carrizo, entre otros, los desarrolladores, te brindan desde la comodidad de tu hogar, saber cuales son las mejores artesanias de los pueblos y municipios de michoacan, con tan solo hacer un par de clics.
+ <br> <br>Creamos un espacio de intercambio y colaboración para enfrentar la incertidumbre económica detonada por los efectos del distanciamiento social debido a la pandemia. Apoyamos directamente a más de doscientos veinte grupos artesanales que celebran y conservan el patrimonio cultural de nuestro país a través de las técnicas que trabajan.
+<br><br>Otro objetivo, ademas de los muchos que tenemos es promover la creación artesanal, es dar reconocimiento y reforzar el mantenimiento de las cadenas de valor formales que han creado vínculos de trabajo horizontal y que garantizan una fuente ingresos a comunidades de artesanas y artesanos en diversos municipios.
+</p>
+<div class="container" style="display:flex;">
+    <div class="card mb-3" style="max-width: 500px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            {% for j in juan%}
+            <img src="{{j.imagen.url}}" class="img-fluid" alt="..." >
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{j.nombre}}</h5>
+              <p class="card-text">Hola me llamo Juan,  soy desarrollador     Back - End del sitio  web de artesanías.
+                </p>
+                {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 500px; float: left; margin-left: 150px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            {% for jo in jose %}
+            <img src="{{jo.imagen.url}}" class="img-fluid" alt="..." height="100px">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{jo.nombre}}</h5>
+              <p class="card-text">Hola me llamo José,  soy desarrollador  Front - End del  sitio web de artesanías.
+                </p>
+                {% endfor %}
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+</div>
+<div class="container" style="display:flex;">
+    <div class="card mb-3" style="max-width: 482px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            {% for e in edgar %}
+            <img src="{{e.imagen.url}}" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{e.nombre}}</h5>
+              <p class="card-text">Hola me llamo Edgar, soy desarrollador Front- End del sitio web de artesanías. </p>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 500px; float: left; margin-left: 150px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            {% for a in abraham %}
+            <img src="{{a.imagen.url}}" class="img-fluid" alt="..." >
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{a.nombre}}</h5>
+              <p class="card-text">Hola me llamo  Abraham,  soy desarrollador  Back End del sitio web de artesanías.
+                </p>
+                {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+</div>
+{% endblock %}

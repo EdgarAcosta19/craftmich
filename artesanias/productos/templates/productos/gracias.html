@@ -1,0 +1,32 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo%}Gracias{%endblock%}
+{% load static%}
+{% block header %}
+<!-- Slider -->
+<div id="carouselExampleCaptions" class="carousel slide mt-5" data-ride="carousel">
+  
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        {% for banner in banners %}
+        <img src="{{banner.imagen.url}}"  width="1600px" height="640px" class="d-block w-100">
+       {% endfor %}
+      </div>
+      
+    </div>
+  </div>
+  <!-- Slider -->
+{%endblock%}
+
+{% block contenido%}
+
+
+<div class="alert alert-success mt-5 py-5" role="alert">
+    <h4 class="alert-heading">Se ha enviado el mensaje con exito!</h4>
+    <p>Se ha enviado el mensaje con exito, felicidades, pronto recibiras, una respuesto lo mas pronto posible a su correo electronico proporcionado.</p>
+    <hr>
+    <p class="mb-0">Siempre que necesites una respuesta, puedes utilizar el formulario de contacto, gracias.</p>
+    <center>   <a type="submit" href="{%url 'Contacto'%}" class="btn text-white image1 mt-5" style="background-color: #483D8B">Regresar</a></center>
+  </div>
+
+{%endblock%}

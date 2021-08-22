@@ -1,0 +1,106 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo%}Quiroga{%endblock%}
+
+{% block header%}
+
+<!-- Slider -->
+<div id="carouselExampleCaptions" class="carousel slide mt-5" data-ride="carousel">
+  
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        {% for banner in banners %}
+        <img src="{{banner.imagen.url}}"  width="1600px" height="640px" class="d-block w-100">
+       {% endfor %}
+      </div>
+      
+    </div>
+  </div>
+  <!-- Slider -->
+{%endblock%}
+{% block contenido%}
+<h2 class="display-4 text-center mt-5">Quiroga</h2>
+<p class="lead text-center my-5 text-dark container">
+  Quiroga es una población del norte del estado mexicano de Michoacán. Cabecera municipal del municipio del mismo nombre. Tiene una altitud de 2080 metros sobre el nivel del mar. Limita al norte con Coeneo, al este con Morelia, al sur con Tzintzuntzan, y al oeste con Erongarícuaro. 
+</p>
+<div class="py-5 centrarmunicipios" >
+  <div>
+      <div class="card ml-5 mr-5" style="width: 15rem;"> 
+      <a href="{%url 'Pinabarro'%}">
+        {% for artesania in artesania %}
+          <img src="{{artesania.imagen.url}}" style="height: 200px;" class="card-img-top" alt="...">
+        </a>
+    
+  </div>
+  <p class="centrarmunicipiostexto" style="text-align: center; font-size: 23px;">{{artesania.nombre}}</p>
+  {% endfor %}
+    </div>
+  <div >
+      <div class="card ml-5 mr-5" style="width: 15rem;"> 
+      <a href="{%url 'Platoartesanal'%}">
+        {% for artesaniados in artesaniados %}
+          <img src="{{artesaniados.imagen.url}}" style="height: 200px;" class="card-img-top" alt="...">
+        
+        </a>
+      
+  </div>
+  <p class="centrarmunicipiostexto" style="text-align: center; font-size: 23px;">{{artesaniados.nombre}}</p>
+  {% endfor %}
+    </div>
+    <div >
+      <div class="card ml-5 mr-5" style="width: 15rem;"> 
+      <a href="{%url 'Gallina'%}">
+        {% for artesaniatres in artesaniatres %}
+          <img src="{{artesaniatres.imagen.url}}" style="height: 200px;" class="card-img-top" alt="...">
+        </a>
+       
+  </div>
+  <p  class="centrarmunicipiostexto" style="text-align: center; font-size: 23px;">{{artesaniatres.nombre}}</p>
+  {% endfor %}
+    </div>
+   
+   
+</div>
+
+
+<div class="py-5 centrarmunicipios">
+  <div >
+      <div class="card ml-5 mr-5" style="width: 15rem;"> 
+      <a href="{%url 'Vasotequileros'%}">
+        {% for artesaniacuatro in artesaniacuatro %}
+          <img src="{{artesaniacuatro.imagen.url}}" style="height: 200px;" class="card-img-top" alt="...">
+      </a>
+      
+  </div>
+  <p  class="centrarmunicipiostexto" style="text-align: center; font-size: 23px;">{{artesaniacuatro.nombre}}</p>
+  {% endfor %}
+    </div>
+  <div >
+      <div class="card ml-5 mr-5" style="width: 15rem;">
+        {% for artesaniacinco in artesaniacinco %} 
+      <a href="{%url 'Cazos'%}">
+          <img src="{{artesaniacinco.imagen.url}}" style="height: 200px;" class="card-img-top" alt="...">
+      </a>
+     
+  </div>
+  <p  class="centrarmunicipiostexto" style="text-align: center; font-size: 20px;">{{artesaniacinco.nombre}}</p>
+  {% endfor %}
+    </div>
+    <div >
+      <div class="card ml-5 mr-5" style="width: 15rem;"> 
+      <a href="{%url 'Titeres'%}">
+        {% for artesaniaseis in artesaniaseis %}
+          <img src="{{artesaniaseis.imagen.url}}" style="height: 200px;" class="card-img-top" alt="...">
+      </a>
+   
+  </div>
+  <p class="centrarmunicipiostexto" style="text-align: center; font-size: 23px;">{{artesaniaseis.nombre}}</p>
+  {% endfor %}
+    </div>
+    
+   
+</div>
+
+     
+
+{%endblock%}
