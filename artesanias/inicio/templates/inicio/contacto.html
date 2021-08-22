@@ -1,0 +1,109 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo%}Contacto{%endblock%}
+
+
+
+{% block header%}
+
+<!-- Slider -->
+<div id="carouselExampleCaptions" class="carousel slide mt-5" data-ride="carousel">
+  
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://i.ibb.co/5jM9HLF/annie-spratt-gohol-CAVTRs-unsplash.jpg"  width="1600px" height="640px" class="d-block w-100"
+          alt="Un desarrollo de aplicaciones de escritorio ayuda mucho para tu empresa">
+       
+      </div>
+      
+    </div>
+  </div>
+  <!-- Slider -->
+{%endblock%}
+
+
+{% block contenido%}
+<!-- SECCIÓN 1 -->
+<section class="container my-5">
+    <h2 class="display-4 text-center">Contáctanos</h2>
+    <p class="lead text-center my-5 text-dark">Ponemos a su disposición este medio de comunicación para que nos envíe cualquier 
+        duda, comentario o sugerencia que tenga con respecto a nuestros servicios y no olvides 
+        seguirnos en nuestras redes sociales.
+    </p>
+
+    <div class="">
+      <div class="row row-cols-md-2">
+        <div class="col mb-4 col-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Horario</h5>
+              <p class="card-text">Lunes a Viernes de 10:00 a.m. a 19:30 p.m.</p>
+              <br>
+              <div class="mt-4">
+                <h5 class="card-title">Dirección</h5>
+                <p class="card-text">Bucareli 113 Col. Las Lomas.</p>
+                <br>
+                <div class="mt-4">
+                  <h5 class="card-title">Número de Teléfono</h5>
+                  <p class="card-text">+52 44 37 27 17 72</p>
+                  <br>
+                  <div class="mt-4">
+                    <h5 class="card-title">Síguenos en nuestras Redes Sociales</h5>
+                    <a href="https://twitter.com/Informa87472161"><img src="https://i.ibb.co/pLWbH7q/facebook.png"  width="40px" height="40px" alt=""></a>
+                    <a href="https://www.facebook.com/Information-Technology-344295200064959"><img src="https://i.ibb.co/YXkjtqk/instagram.png" class="ml-3" width="40px" height="40px" alt=""></a>
+                    
+                    <a href="https://mail.google.com/mail/u/0/?tab=wm#inbox?compose=new"><img src="https://i.ibb.co/mDmSTN7/twitter.png"  width="40px" class="ml-3" height="40px" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-end ">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="display-4">Formulario</h1>
+                  <hr class="bg-info">
+                  <p class="pb-0 mb-0">Te invitamos a contactarnos.</p>
+                  <p class="text-danger small mt-0 pt-0"># Todos los campos son obligatorios.</p>
+
+                  <form action="">
+                    <div class="row from-group">
+                      <label for="nombre" class="col-form-label col-md-4">Nombre: </label>
+                      <div class="col-md-8">
+                        <input type="text" name="nombre" id="nombre" class="form-control" required>
+                      </div>
+                    </div>
+                    <div class="row from-group mt-3">
+                        <label for="nombre" class="col-form-label col-md-4">Teléfono: </label>
+                        <div class="col-md-8">
+                          <input type="text" name="nombre" id="nombre" class="form-control" required>
+                        </div>
+                      </div>
+
+                    <div class="row from-group mt-3">
+                      <label for="email" class="col-form-label col-md-4">Email: </label>
+                      <div class="col-md-8">
+                        <input type="email" name="email" id="email" class="form-control" required>
+                      </div>
+                    </div>
+
+                    <div class="row form-group mt-3">
+                      <label for="mensaje" class="col-form-label col-md-4">Mensaje: </label>
+                      <div class="col-md-8">
+                        <textarea name="mensaje" id="mensaje" rows="3" class="form-control" required></textarea>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn text-white image1" style="background-color: #FC9C04;">Enviar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+{% endblock %}
